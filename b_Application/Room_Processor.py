@@ -39,11 +39,13 @@ class _RoomProcessor:
                     _ReservationProcessor.write_check_in_time(ThisReservations)
                     #write roomnum into reservation class 
                     # as the staff select a room for the user
+                    _RoomManagementUI.Show_Success_Message()
                 else:
                     a_room.Status = False
                     _ReservationProcessor.write_check_out_time(ThisReservation)
                     #write checkout time into reservation object 
                     #when a room status is switch from occupied to vacant
+                    _RoomManagementUI.Show_Success_Message()
 
 
                 a_room.update_status
